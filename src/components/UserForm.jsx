@@ -21,13 +21,13 @@ const UserForm = () => {
           name: Yup.string().required().trim().max(55),
         })}
         onSubmit={(values) => {
-          console.log(values);
+          return console.log(values);
         }}
       >
         {(formik) => {
           return (
             <form
-              onSubmit={formik.handleChange}
+              onSubmit={formik.handleSubmit}
               style={{
                 display: "flex",
                 flexDirection: "column",
